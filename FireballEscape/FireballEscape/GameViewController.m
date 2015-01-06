@@ -38,14 +38,14 @@
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
-    /* Sprite Kit applies additional optimizations to improve rendering performance */
+    skView.showsDrawCount = YES;
+    skView.showsQuadCount = YES;
+    skView.showsPhysics = YES;
+    skView.showsFields = YES;
     skView.ignoresSiblingOrder = YES;
     
-    // Create and configure the scene.
     GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
     [skView presentScene:scene];
 }
 
@@ -61,12 +61,6 @@
     } else {
         return UIInterfaceOrientationMaskAll;
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 - (BOOL)prefersStatusBarHidden {

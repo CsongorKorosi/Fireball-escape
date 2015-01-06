@@ -8,42 +8,56 @@
 
 #import "GameScene.h"
 
+@interface GameScene ()
+@property BOOL contentCreated;
+@end
+
 @implementation GameScene
 
--(void)didMoveToView:(SKView *)view {
-    /* Setup your scene here */
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-    
-    myLabel.text = @"Hello, World!";
-    myLabel.fontSize = 65;
-    myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame));
-    
-    [self addChild:myLabel];
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.xScale = 0.5;
-        sprite.yScale = 0.5;
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
+- (void)didMoveToView: (SKView *) view
+{
+    if (!self.contentCreated)
+    {
+        [self createSceneContents];
+        self.contentCreated = YES;
     }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+}
+
+- (void)createSceneContents
+{
+    self.backgroundColor = [SKColor blueColor];
+    self.scaleMode = SKSceneScaleModeAspectFill;
+    [self addChild: [self newHelloNode]];
+}
+
+- (SKLabelNode *)newHelloNode
+{
+    SKLabelNode *helloNode = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    helloNode.text = @"Hello, World!";
+    helloNode.fontSize = 42;
+    helloNode.name = @"helloNode";
+    helloNode.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame));
+    return helloNode;
+}
+
+- (void)touchesBegan:(NSSet *) touches withEvent:(UIEvent *)event
+{
+    SKNode *helloNode = [self childNodeWithName:@"helloNode"];
+    if (helloNode != nil)
+    {
+        helloNode.name = nil;
+        SKAction *moveUp = [SKAction moveByX: 0 y: 100.0 duration: 0.5];
+        SKAction *zoom = [SKAction scaleTo: 2.0 duration: 0.25];
+        SKAction *pause = [SKAction waitForDuration: 0.5];
+        SKAction *fadeAway = [SKAction fadeOutWithDuration: 0.25];
+        SKAction *remove = [SKAction removeFromParent];
+        SKAction *moveSequence = [SKAction sequence:@[moveUp, zoom, pause, fadeAway, remove]];
+        [helloNode runAction: moveSequence];
+    }
 }
 
 @end

@@ -32,15 +32,15 @@
 		0B58CB7D1A5C16A7004E448A /* FireballEscape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireballEscape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B58CB811A5C16A7004E448A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B58CB821A5C16A7004E448A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0B58CB841A5C16A7004E448A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0B58CB851A5C16A7004E448A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B58CB871A5C16A7004E448A /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		0B58CB881A5C16A7004E448A /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		0B58CB8A1A5C16A7004E448A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		0B58CB8C1A5C16A7004E448A /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		0B58CB8D1A5C16A7004E448A /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		0B58CB841A5C16A7004E448A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		0B58CB851A5C16A7004E448A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		0B58CB871A5C16A7004E448A /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../../GameScene.h; sourceTree = "<group>"; };
+		0B58CB881A5C16A7004E448A /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = ../../GameScene.m; sourceTree = "<group>"; };
+		0B58CB8A1A5C16A7004E448A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = ../../GameScene.sks; sourceTree = "<group>"; };
+		0B58CB8C1A5C16A7004E448A /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameViewController.h; path = ../../GameViewController.h; sourceTree = "<group>"; };
+		0B58CB8D1A5C16A7004E448A /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GameViewController.m; path = ../../GameViewController.m; sourceTree = "<group>"; };
 		0B58CB901A5C16A7004E448A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0B58CB921A5C16A7004E448A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0B58CB921A5C16A7004E448A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		0B58CB951A5C16A7004E448A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0B58CB9B1A5C16A7004E448A /* FireballEscapeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireballEscapeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B58CBA01A5C16A7004E448A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,16 +86,8 @@
 		0B58CB7F1A5C16A7004E448A /* FireballEscape */ = {
 			isa = PBXGroup;
 			children = (
-				0B58CB841A5C16A7004E448A /* AppDelegate.h */,
-				0B58CB851A5C16A7004E448A /* AppDelegate.m */,
-				0B58CB871A5C16A7004E448A /* GameScene.h */,
-				0B58CB881A5C16A7004E448A /* GameScene.m */,
-				0B58CB8A1A5C16A7004E448A /* GameScene.sks */,
-				0B58CB8C1A5C16A7004E448A /* GameViewController.h */,
-				0B58CB8D1A5C16A7004E448A /* GameViewController.m */,
-				0B58CB8F1A5C16A7004E448A /* Main.storyboard */,
-				0B58CB921A5C16A7004E448A /* Images.xcassets */,
-				0B58CB941A5C16A7004E448A /* LaunchScreen.xib */,
+				0BA0A5441A5C1C2E0029F06B /* Classes */,
+				0BA0A5451A5C1C2E0029F06B /* Resources */,
 				0B58CB801A5C16A7004E448A /* Supporting Files */,
 			);
 			path = FireballEscape;
@@ -125,6 +117,54 @@
 				0B58CBA01A5C16A7004E448A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BA0A5441A5C1C2E0029F06B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0B58CB841A5C16A7004E448A /* AppDelegate.h */,
+				0B58CB851A5C16A7004E448A /* AppDelegate.m */,
+				0BA0A5461A5C1C7D0029F06B /* Node */,
+				0BA0A5471A5C1C7D0029F06B /* Scene */,
+				0BA0A5481A5C1C7D0029F06B /* ViewController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0BA0A5451A5C1C2E0029F06B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B58CB921A5C16A7004E448A /* Images.xcassets */,
+				0B58CB8F1A5C16A7004E448A /* Main.storyboard */,
+				0B58CB941A5C16A7004E448A /* LaunchScreen.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0BA0A5461A5C1C7D0029F06B /* Node */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		0BA0A5471A5C1C7D0029F06B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0B58CB871A5C16A7004E448A /* GameScene.h */,
+				0B58CB881A5C16A7004E448A /* GameScene.m */,
+				0B58CB8A1A5C16A7004E448A /* GameScene.sks */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		0BA0A5481A5C1C7D0029F06B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0B58CB8C1A5C16A7004E448A /* GameViewController.h */,
+				0B58CB8D1A5C16A7004E448A /* GameViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +300,7 @@
 				0B58CB901A5C16A7004E448A /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0B58CB941A5C16A7004E448A /* LaunchScreen.xib */ = {
@@ -268,6 +309,7 @@
 				0B58CB951A5C16A7004E448A /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -424,6 +466,7 @@
 				0B58CBA71A5C16A7004E448A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B58CBA81A5C16A7004E448A /* Build configuration list for PBXNativeTarget "FireballEscapeTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +475,7 @@
 				0B58CBAA1A5C16A7004E448A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
